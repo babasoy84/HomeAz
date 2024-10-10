@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\HomeAz.Api.Mapper\HomeAz.Api.Mapper.csproj" />
     <ProjectReference Include="..\..\Infrastructure\HomeAz.Api.Persistence\HomeAz.Api.Persistence.csproj" />
   </ItemGroup>
 

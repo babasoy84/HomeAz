@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAz.Api.Infrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAz.Api.WebApi", "src\Api\Presentation\HomeAz.Api.WebApi\HomeAz.Api.WebApi.csproj", "{ACF3F910-E943-437C-A78A-FFCAB807C011}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAz.Api.Mapper", "src\Api\Core\HomeAz.Api.Mapper\HomeAz.Api.Mapper.csproj", "{B5B04F6A-EA23-403F-A6BA-9B73D7930A08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{ACF3F910-E943-437C-A78A-FFCAB807C011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACF3F910-E943-437C-A78A-FFCAB807C011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACF3F910-E943-437C-A78A-FFCAB807C011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B04F6A-EA23-403F-A6BA-9B73D7930A08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B04F6A-EA23-403F-A6BA-9B73D7930A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B04F6A-EA23-403F-A6BA-9B73D7930A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B04F6A-EA23-403F-A6BA-9B73D7930A08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +92,7 @@ Global
 		{C0B4FB8F-6BBE-4B14-B95E-DF57768EF3F9} = {4384BFAF-8454-4A64-B433-D108776D2279}
 		{877F26D6-54BF-4CAD-952E-E9C0E8F65ED9} = {4384BFAF-8454-4A64-B433-D108776D2279}
 		{ACF3F910-E943-437C-A78A-FFCAB807C011} = {2C132E5C-316A-4618-A755-31690CB083BB}
+		{B5B04F6A-EA23-403F-A6BA-9B73D7930A08} = {4E0ED3EA-4CE0-47B7-93C2-D1D35E331297}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01A6DDDD-1662-4A57-A9F9-986FC5F60A30}

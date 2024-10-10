@@ -1,3 +1,4 @@
+using HomeAz.Api.Mapper;
 using HomeAz.Api.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,7 @@ builder.Configuration
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddCustomMapper();
 
 var app = builder.Build();
 
