@@ -1,4 +1,6 @@
-﻿using HomeAz.Api.Persistence.Context;
+﻿using HomeAz.Api.Application.Interfaces.Repositories;
+using HomeAz.Api.Persistence.Context;
+using HomeAz.Api.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +18,9 @@ namespace HomeAz.Api.Persistence
         {
             services.AddDbContext<AppDbContext>(opt =>
             opt.UseSqlServer(configuration.GetConnectionString("Default")));
+
+            services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
+            services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
         }
     }
 }

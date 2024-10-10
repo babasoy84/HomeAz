@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\HomeAz.Api.Application\HomeAz.Api.Application.csproj" />
     <ProjectReference Include="..\..\Core\HomeAz.Api.Domain\HomeAz.Api.Domain.csproj" />
   </ItemGroup>
 

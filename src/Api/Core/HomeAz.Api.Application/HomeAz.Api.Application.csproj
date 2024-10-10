@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HomeAz.Api.Domain\HomeAz.Api.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
