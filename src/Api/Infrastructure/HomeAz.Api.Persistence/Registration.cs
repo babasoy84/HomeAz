@@ -1,6 +1,8 @@
 ﻿using HomeAz.Api.Application.Interfaces.Repositories;
+using HomeAz.Api.Application.Interfaces.UnitOfWorks;
 using HomeAz.Api.Persistence.Context;
 using HomeAz.Api.Persistence.Repositories;
+using HomeAz.Api.Persistence.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +23,8 @@ namespace HomeAz.Api.Persistence
 
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }
