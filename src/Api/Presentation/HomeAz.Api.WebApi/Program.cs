@@ -1,4 +1,6 @@
 using HomeAz.Api.Mapper;
+using HomeAz.Api.Application;
+using HomeAz.Api.Infrastructure;
 using HomeAz.Api.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,8 +19,18 @@ builder.Configuration
     .AddJsonFile("appsettings.json", optional: false)
     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
 
-builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddApplication();
 builder.Services.AddCustomMapper();
+builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
+});
 
 var app = builder.Build();
 
@@ -28,6 +40,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAllOrigins");
 
 app.UseAuthorization();
 

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -15,11 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\..\Core\HomeAz.Api.Application\HomeAz.Api.Application.csproj" />
     <ProjectReference Include="..\..\Core\HomeAz.Api.Mapper\HomeAz.Api.Mapper.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\HomeAz.Api.Infrastructure\HomeAz.Api.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\HomeAz.Api.Persistence\HomeAz.Api.Persistence.csproj" />
   </ItemGroup>
 
