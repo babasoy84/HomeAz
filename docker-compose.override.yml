@@ -1,0 +1,34 @@
+services:
+  homeaz.api.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=5000
+    ports:
+      - 5000:5000
+    networks:
+      - homeaz_frontend
+      - homeaz_backend
+  
+  homeaz.clients.vite-web:
+    ports:
+      - 3000:80
+    networks:
+      - homeaz_frontend
+
+  homeaz.projections.uploadimageservice:
+    environment:
+      - DOTNET_ENVIRONMENT=Development
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+    networks:
+      - homeaz_backend
+
+
+networks:
+  homeaz_frontend:
+    driver: bridge
+    external: true
+  homeaz_backend:
+    driver: bridge
+    external: true
+

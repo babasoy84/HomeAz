@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAz.Api.Mapper", "src\Ap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vite-web", "vite-web", "{96637EA4-1FDD-41E7-BD7C-3189D9CD91F4}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8C1E1447-10C8-428C-8C11-13B54BC97FC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{B5B04F6A-EA23-403F-A6BA-9B73D7930A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5B04F6A-EA23-403F-A6BA-9B73D7930A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5B04F6A-EA23-403F-A6BA-9B73D7930A08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1E1447-10C8-428C-8C11-13B54BC97FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1E1447-10C8-428C-8C11-13B54BC97FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1E1447-10C8-428C-8C11-13B54BC97FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1E1447-10C8-428C-8C11-13B54BC97FC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

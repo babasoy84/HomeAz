@@ -8,7 +8,7 @@ namespace HomeAz.Common
 {
     public class HomeAzConstants
     {
-        public const string RabbitMqHost = "localhost";
+        public const string RabbitMqHost = "homeaz_rabbitmq_container";
         public const string DefaultExchangeType = "direct";
         public const string ImageExchangeName = "propertyImageExchange";
         public const string UploadImageQueueName = "propertyImageQueue";

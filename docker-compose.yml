@@ -1,0 +1,21 @@
+services:
+  homeaz.api.webapi:
+    container_name: "homeaz_api_container"
+    image: ${DOCKER_REGISTRY-}homeazapiwebapi
+    build:
+      context: .
+      dockerfile: src/Api/Presentation/HomeAz.Api.WebApi/Dockerfile
+
+  homeaz.clients.vite-web:
+    container_name: "homeaz_webapp_container"
+    image: ${DOCKER_REGISTRY-}homeazwebapp
+    build:
+      context: .
+      dockerfile: src/Clients/vite-web/Dockerfile
+
+  homeaz.projections.uploadimageservice:
+    container_name: "homeaz_uploadimageservice_container"
+    image: ${DOCKER_REGISTRY-}homeazprojectionsuploadimageservice
+    build:
+      context: .
+      dockerfile: src/Projections/HomeAz.Projections.UploadImageService/Dockerfile
