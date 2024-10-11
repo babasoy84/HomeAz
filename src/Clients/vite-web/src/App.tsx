@@ -3,6 +3,7 @@ import PropertyFilter from "./components/PropertyFilter";
 import PropertyCard from "./components/PropertyCard";
 import Pagination from "./components/Pagination";
 import Header from "./components/Header";
+import Loader from "./components/Loader";
 import AddPropertyForm from "./components/AddPropertyForm";
 import { Home } from "lucide-react";
 import axios from "axios";
@@ -145,7 +146,7 @@ function App() {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
 
   return (

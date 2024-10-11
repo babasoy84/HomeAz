@@ -24,7 +24,7 @@ interface PropertyCardProps {
   squareFootage?: number;
 }
 
-const fallbackImage = "../../src/assets/images/fallback_image.png";
+const fallbackImage = "/assets/images/fallback_image.png";
 
 export default function PropertyCard({
   images = [],

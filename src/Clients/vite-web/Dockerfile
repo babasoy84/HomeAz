@@ -16,5 +16,6 @@ FROM nginx:alpine AS production
 WORKDIR /var/www/web
 COPY --from=build /app/dist .
 COPY "src/Clients/vite-web/nginx.conf" /etc/nginx/nginx.conf
+COPY src/Clients/vite-web/src/assets/images /var/www/web/assets/images
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
